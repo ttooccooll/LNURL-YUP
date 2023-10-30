@@ -73,7 +73,7 @@ app.get('/callback', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Open the pod bay doors.');
+    res.send('Close the pod bay doors.');
 });
 
 app.listen(process.env.PORT || 3000, () => {
