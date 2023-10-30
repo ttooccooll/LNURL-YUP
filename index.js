@@ -16,6 +16,10 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+app.get('/', (req, res) => {
+    res.send('Close the pod bay doors.');
+});
+
 app.options('*', cors());
 
 connect();
@@ -70,10 +74,6 @@ app.get('/callback', async (req, res) => {
     };
 
     res.json(response);
-});
-
-app.get('/', (req, res) => {
-    res.send('Close the pod bay doors.');
 });
 
 app.listen(process.env.PORT || 3000, () => {
